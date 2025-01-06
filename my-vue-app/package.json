@@ -10,8 +10,16 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@safe-global/api-kit": "^2.5.6",
+    "@safe-global/protocol-kit": "^5.1.1",
+    "@safe-global/safe-core-sdk-types": "^5.1.0",
+    "@usecapsule/ethers-v6-integration": "^2.15.0",
+    "@usecapsule/react-sdk": "^4.15.0",
+    "@usecapsule/viem-v2-integration": "^2.15.0",
+    "ethers": "^6.13.5",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "viem": "^2.22.2"
   },
   "devDependencies": {
     "@eslint/js": "^9.17.0",
