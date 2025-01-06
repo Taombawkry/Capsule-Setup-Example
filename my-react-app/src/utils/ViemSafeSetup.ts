@@ -12,7 +12,7 @@ import { SafeAccountConfig } from '@safe-global/safe-core-sdk-types';
 export const setupViemSafe = async (capsule: any) => {
   // Create the Capsule Viem client
   const capsuleViemClient = createCapsuleViemClient(capsule, {
-    chain;;;;;;;;;;;;;;, // Replace with your desired chain
+    chain: sepolia,
     transport: http("https://ethereum.rpc.subquery.network/public"), // Replace with your RPC URL
   });
 
@@ -29,7 +29,10 @@ export const setupViemSafe = async (capsule: any) => {
   });
 
   // Initialize Safe SDK
-  const safeSdk = await Safe.create({ ethAdapter, safeAccountConfig });
+  const safeSdk = await Safe.create({
+    ethAdapter,
+    safeAddress: safeAccountConfig.owners[0], // Use the first owner as the Safe address
+  });
 
   return { safeSdk, capsuleViemClient };
 };

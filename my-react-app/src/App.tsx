@@ -1,9 +1,11 @@
 // App.tsx
-import { useState } from "react";
+import  { useState } from "react";
 import { CapsuleModal } from "@usecapsule/react-sdk";
 import "@usecapsule/react-sdk/styles.css";
 import { setupViemSafe } from "./utils/ViemSafeSetup";
-import { setupCapsule,signTransaction } from "./utils/CapsuleSetup";
+import { setupCapsule, signTransaction } from "./utils/CapsuleSetup";
+
+
 
 function App() {
   const capsuleApiKey = import.meta.env.VITE_REACT_APP_CAPSULE_API_KEY;
