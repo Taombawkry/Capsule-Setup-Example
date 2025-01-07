@@ -10,6 +10,7 @@ import { ethers, TransactionRequest } from "ethers";
  * @returns An object containing the Capsule instance and Ethers signer
  */
 export const setupCapsule = (capsuleApiKey: string, providerApiKey: string) => {
+  const ethRpcUrl = import.meta.env.VITE_REACT_APP_ETH_RPC_URL;
   // Initialize the Capsule instance
   const capsule = new Capsule(Environment.BETA, capsuleApiKey);
   console.log("Capsule instance created:", capsule);

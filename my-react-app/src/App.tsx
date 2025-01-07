@@ -9,10 +9,10 @@ import { setupCapsule, signTransaction } from "./utils/CapsuleSetup";
 
 function App() {
   const capsuleApiKey = import.meta.env.VITE_REACT_APP_CAPSULE_API_KEY;
-  const providerApiKey = import.meta.env.VITE_REACT_APP_CAPSULE_API_KEY;
+  const providerRpcUrl = import.meta.env.VITE_REACT_APP_ETH_RPC_URL;
 
   // Setup Capsule and Ethers Signer
-  const { capsule, ethersSigner } = setupCapsule(capsuleApiKey, providerApiKey);
+  const { capsule, ethersSigner } = setupCapsule(capsuleApiKey, providerRpcUrl);
 
   // Setup Capsule Viem Client and Safe SDK
   setupViemSafe(capsule).then(async ({ safeSdk, capsuleViemClient }) => {
